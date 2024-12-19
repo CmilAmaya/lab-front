@@ -19,7 +19,7 @@ export const getPersonas = async () => {
 // Crear una nueva persona
 export const createPersona = async (persona) => {
   try {
-    const response = await axios.post(`${BASE_URL}/persona`, persona);
+    const response = await axios.post('https://lab-leroi.onrender.com/persona', persona);
     return response.data;
   } catch (error) {
     console.error("Error creando persona:", error);
@@ -30,7 +30,7 @@ export const createPersona = async (persona) => {
 // Obtener una persona por ID
 export const getPersonaById = async (id) => {
   try {
-    const response = await axios.get(`${BASE_URL}/persona/${id}`);
+    const response = await axios.get('https://lab-leroi.onrender.com/persona/${id}');
     return response.data;
   } catch (error) {
     console.error(`Error obteniendo persona con ID ${id}:`, error);
@@ -41,7 +41,7 @@ export const getPersonaById = async (id) => {
 // Actualizar una persona
 export const updatePersona = async (id, persona) => {
   try {
-    const response = await axios.put(`${BASE_URL}/persona/${id}`, persona);
+    const response = await axios.put('https://lab-leroi.onrender.com/persona/${id}', persona);
     return response.data;
   } catch (error) {
     console.error(`Error actualizando persona con ID ${id}:`, error);
@@ -52,7 +52,7 @@ export const updatePersona = async (id, persona) => {
 // Eliminar una persona
 export const deletePersona = async (id) => {
   try {
-    const response = await axios.delete(`${BASE_URL}/persona/${id}`);
+    const response = await axios.delete('https://lab-leroi.onrender.com/persona/${id}');
     return response.data;
   } catch (error) {
     console.error(`Error eliminando persona con ID ${id}:`, error);
