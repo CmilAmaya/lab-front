@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URL = "https://lab-leroi.vercel.app"; 
+const BASE_URL = "https://lab-leroi.onrender.com"; 
 
 // Obtener todas las personas
 export const getPersonas = async () => {
