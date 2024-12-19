@@ -5,7 +5,7 @@ const BASE_URL = import.meta.env.VITE_BACK_URL;
 // Crear una nueva propiedad (propietario y vivienda)
 export const createPropietario = async (data) => {
     try {
-        const response = await axios.post(`${BASE_URL}/propietario`, data);
+        const response = await axios.post('https://lab-leroi.onrender.com/propietario', data);
         return response.data;
     } catch (error) {
         console.error("Error creando propietario:", error);
@@ -16,7 +16,7 @@ export const createPropietario = async (data) => {
 // Obtener todas las relaciones propietario-vivienda
 export const getPropietarios = async () => {
     try {
-        const response = await axios.get(`${BASE_URL}/propietario`);
+        const response = await axios.get('https://lab-leroi.onrender.com/propietario');
         return response.data;
     } catch (error) {
         console.error("Error obteniendo propietarios:", error);
@@ -27,7 +27,7 @@ export const getPropietarios = async () => {
 // Obtener todas las viviendas de un propietario o todos los propietarios de una vivienda
 export const getPropietarioById = async (id) => {
     try {
-        const response = await axios.get(`${BASE_URL}/propietario/${id}`);
+        const response = await axios.get(`https://lab-leroi.onrender.com/propietario/${id}`);
         return response.data;
     } catch (error) {
         console.error(`Error obteniendo propiedad con ID ${id}:`, error);
@@ -38,7 +38,7 @@ export const getPropietarioById = async (id) => {
 // Actualizar una relación propietario-vivienda específica
 export const updatePropietario = async (data) => {
     try {
-        const response = await axios.put(`${BASE_URL}/propietario-propiedad/`, data);
+        const response = await axios.put(`https://lab-leroi.onrender.com/propietario-propiedad/`, data);
         return response.data;
     } catch (error) {
         console.error("Error actualizando propietario:", error);
@@ -49,7 +49,7 @@ export const updatePropietario = async (data) => {
 // Eliminar una relación propietario-vivienda específica
 export const deletePropietario = async (data) => {
     try {
-        const response = await axios.delete(`${BASE_URL}/propietario-propiedad/`, {
+        const response = await axios.delete(`https://lab-leroi.onrender.com/propietario-propiedad/`, {
             data,
         });
         return response.data;
@@ -62,7 +62,7 @@ export const deletePropietario = async (data) => {
 // Obtener todas las propiedades de una persona
 export const getPropiedadesDePersona = async (id) => {
     try {
-        const response = await axios.get(`${BASE_URL}/propietariop/${id}`);
+        const response = await axios.get(`https://lab-leroi.onrender.com/propietariop/${id}`);
         return response.data;
     } catch (error) {
         console.error(`Error obteniendo propiedades de la persona con ID ${id}:`, error);
@@ -73,7 +73,7 @@ export const getPropiedadesDePersona = async (id) => {
 // Obtener el propietario de una vivienda específica
 export const getPropietarioDeVivienda = async (id) => {
     try {
-        const response = await axios.get(`${BASE_URL}/propietariov/${id}`);
+        const response = await axios.get(`https://lab-leroi.onrender.com/propietariov/${id}`);
         return response.data;
     } catch (error) {
         console.error(`Error obteniendo propietario de la vivienda con ID ${id}:`, error);
