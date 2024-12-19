@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
-const BASE_URL = import.meta.env.BACK_URL; 
-
+const BASE_URL = import.meta.env.VITE_BACK_URL; 
+console.log("BASE_URL: ", BASE_URL);
 // Obtener todas las personas
 export const getPersonas = async () => {
   try {
