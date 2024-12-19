@@ -6,7 +6,7 @@ console.log("BASE_URL: ", BASE_URL);
 // Obtener todas las personas
 export const getPersonas = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/persona`);
+    const response = await axios.get('https://lab-leroi.onrender.com/persona');
     console.log("BASE_URL: ", BASE_URL);
     console.log(`${BASE_URL}/persona`);
     return response.data;
