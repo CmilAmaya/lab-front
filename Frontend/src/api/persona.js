@@ -7,7 +7,7 @@ const BASE_URL = import.meta.env.VITE_API_URL;
 export const getPersonas = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/persona`);
-
+    console.log(`${BASE_URL}/persona`);
     return response.data;
   } catch (error) {
     console.error("Error obteniendo personas:", error);
