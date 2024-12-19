@@ -78,7 +78,7 @@ export default function Municipios() {
                     </div>
 
                     {/* Lista de Municipios */}
-                    <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 h-full min-h-screen p-20 content-start">
+                    <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 h-full min-h-screen p-20 content-start">
                         {displayedMunicipios.map((municipio, index) => (
                             <Card
                                 key={index}

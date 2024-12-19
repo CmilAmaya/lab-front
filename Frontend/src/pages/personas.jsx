@@ -63,7 +63,7 @@ export default function Personas() {
                     </div>
 
                     {/* Lista de Personas */}
-                    <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 h-full min-h-screen p-20 content-start">
+                    <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 h-full min-h-screen p-20 content-start">
                         {displayedPersonas.map((persona) => (
                             <Card
                                 key={persona.id_persona} // Usa un ID único como clave
