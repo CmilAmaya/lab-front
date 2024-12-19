@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_API_URL; 
+const BASE_URL = import.meta.env.BACK_URL; 
 
 // Crear una vivienda
 export const createVivienda = async (data) => {
