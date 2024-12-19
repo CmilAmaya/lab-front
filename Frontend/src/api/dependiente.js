@@ -5,7 +5,7 @@ const BASE_URL = import.meta.env.VITE_BACK_URL;
 // Obtener todos los dependientes
 export const getDependientes = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/dependiente`);
+    const response = await axios.get('https://lab-leroi.onrender.com/dependiente');
     return response.data;
   } catch (error) {
     console.error("Error obteniendo dependientes:", error);
@@ -16,7 +16,7 @@ export const getDependientes = async () => {
 // Crear un nuevo dependiente
 export const createDependiente = async (dependiente) => {
   try {
-    const response = await axios.post(`${BASE_URL}/dependiente`, dependiente);
+    const response = await axios.post('https://lab-leroi.onrender.com/dependiente', dependiente);
     return response.data;
   } catch (error) {
     console.error("Error creando dependiente:", error);
@@ -27,7 +27,7 @@ export const createDependiente = async (dependiente) => {
 // Obtener un dependiente por ID
 export const getDependienteById = async (id) => {
   try {
-    const response = await axios.get(`${BASE_URL}/dependiente/${id}`);
+    const response = await axios.get(`https://lab-leroi.onrender.com/dependiente/${id}`);
     return response.data;
   } catch (error) {
     console.error(`Error obteniendo dependiente con ID ${id}:`, error);
@@ -38,7 +38,7 @@ export const getDependienteById = async (id) => {
 // Actualizar un dependiente
 export const updateDependiente = async (id, dependiente) => {
   try {
-    const response = await axios.put(`${BASE_URL}/dependiente/${id}`, dependiente);
+    const response = await axios.put(`https://lab-leroi.onrender.com/dependiente/${id}`, dependiente);
     return response.data;
   } catch (error) {
     console.error(`Error actualizando dependiente con ID ${id}:`, error);
@@ -49,7 +49,7 @@ export const updateDependiente = async (id, dependiente) => {
 // Eliminar un dependiente
 export const deleteDependiente = async (id) => {
   try {
-    const response = await axios.delete(`${BASE_URL}/dependiente/${id}`);
+    const response = await axios.delete(`https://lab-leroi.onrender.com/dependiente/${id}`);
     return response.data;
   } catch (error) {
     console.error(`Error eliminando dependiente con ID ${id}:`, error);
@@ -60,7 +60,7 @@ export const deleteDependiente = async (id) => {
 // Verificar si una persona es cabeza de familia
 export const checkCabezaDeFamilia = async (id_persona) => {
   try {
-    const response = await axios.get(`${BASE_URL}/dependiente-cabeza/${id_persona}`);
+    const response = await axios.get(`https://lab-leroi.onrender.com/dependiente-cabeza/${id_persona}`);
     return response.data;
   } catch (error) {
     console.error(`Error verificando si la persona es cabeza de familia con ID ${id_persona}:`, error);
@@ -71,7 +71,7 @@ export const checkCabezaDeFamilia = async (id_persona) => {
 // Verificar si una persona depende de alguien
 export const checkDependencia = async (id_persona) => {
   try {
-    const response = await axios.get(`${BASE_URL}/dependientede/${id_persona}`);
+    const response = await axios.get(`https://lab-leroi.onrender.com/dependientede/${id_persona}`);
     return response.data;
   } catch (error) {
     console.error(`Error verificando dependencia de la persona con ID ${id_persona}:`, error);
@@ -82,7 +82,7 @@ export const checkDependencia = async (id_persona) => {
 // Actualizar cabeza de familia de un dependiente
 export const updateCabezaFamilia = async (dependienteNuevo, cabezaFamiliaNuevo, dependiente, cabezaFamilia) => {
   try {
-    const response = await axios.put(`${BASE_URL}/dependiente-cabeza`, {
+    const response = await axios.put('https://lab-leroi.onrender.com/dependiente-cabeza', {
       id_dependienteNuevo: dependienteNuevo,
       id_cabeza_familiaNuevo: cabezaFamiliaNuevo,
       id_dependiente: dependiente,
@@ -98,7 +98,7 @@ export const updateCabezaFamilia = async (dependienteNuevo, cabezaFamiliaNuevo, 
 // Eliminar dependencia de cabeza de familia
 export const deleteCabezaFamilia = async (dependiente, cabezaFamilia) => {
   try {
-    const response = await axios.delete(`${BASE_URL}/dependiente-cabeza`, {
+    const response = await axios.delete(`https://lab-leroi.onrender.com/dependiente-cabeza`, {
       data: { id_dependiente: dependiente, id_cabeza_familia: cabezaFamilia }
     });
     return response.data;
